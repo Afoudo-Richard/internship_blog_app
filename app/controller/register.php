@@ -1,8 +1,8 @@
 <?php
-class Home extends Controller
+class Register extends Controller
 {
 	public function index()
 	{
-		$this->render_view("home/index");
+		$this->render_view("home/register");
 	}
 }

@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 d-none d-lg-block">
-                        <a href="index.html" class="d-flex  col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none" data-label="Site logo">
+                        <a href="<?php base_url() ?>" class="d-flex  col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none" data-label="Site logo">
                         <img src="<?php base_url('assets/img/bisabos.png') ?>" height="40px" width="40px" alt="Bisabos.com">
                         </a>
                     </div>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-md-3 d-none d-lg-block text-end">
                         <a href="<?php base_url('login') ?>" class="btn btn-light me-2">Login</a>
-                        <a href="<?php site_url('register') ?>" class="btn btn-primary">Create account</a>
+                        <a href="<?php base_url('register') ?>" class="btn btn-primary">Create account</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 <?php
+
 	class Model
 	{
 	
@@ -6,9 +7,10 @@
 		private $hostname='localhost';
 		private $username='root';
 		private $password='';
-		private $database='ArcPost';
+		private $database='internship_blog';
 
 		public function __construct(){
+				
 			$this->conn=mysqli_connect($this->hostname,$this->username,$this->password,$this->database) or die('Database connection error');
 			//$this->conn=mysqli_connect('localhost', 'root', '', 't-manager');	
 		}

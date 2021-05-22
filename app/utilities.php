@@ -13,5 +13,3 @@
         $url = $config['url'].$path;
         return $url;
     }
-
-    echo site_url('login');
