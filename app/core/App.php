@@ -20,7 +20,8 @@ class App
 			$this->controller = $url[0];
 			unset($url[0]);
 		}
-		else{
+		else
+		{
 			$this->controller = $this->error;
 		}
 
@@ -37,7 +38,9 @@ class App
 			{
 				$this->method = $url[1];
 				unset($url[1]);
-			}else{
+			}
+			else
+			{
 				$this->controller = $this->error;
 				require_once("app/controller/".$this->controller.".php");
 				$this->controller = new $this->error;

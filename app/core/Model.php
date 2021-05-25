@@ -17,7 +17,7 @@
 		
 		private function execute_query($sql_stmt)
 		{
-		    $result=mysqli_query($this->conn,$sql_stmt);
+		    $result = mysqli_query($this->conn,$sql_stmt);
 		    return $result ? true:false;
         }
 		
@@ -27,7 +27,8 @@
 		    $rows=mysqli_num_rows($result);
 		    if($rows>0){
 		    	$data=array();
-		        while($row=mysqli_fetch_array($result)){
+		        while($row=mysqli_fetch_array($result))
+				{
 		            $data[]=$row;
                 }
                 return $data;

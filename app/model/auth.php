@@ -52,4 +52,42 @@
 				return 2;
 			}
 		}
+
+		public function loginAuth($email, $password)
+		{
+			$data = [];
+			$sql="SELECT * FROM user where email='$email'";
+			$result = $this->query($sql);
+			$data = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+			if(!empty($data)){
+				if(password_verify($password, $data['password'])){
+					return $data;
+				}
+			}
+			var_dump($data);	
+			
+			return false;
+			
+
+		}
+
+		public function validate_unique_email($email)
+		{
+			$sql="SELECT email FROM user where email='$email'";
+			$result = $this->query($sql);
+			$num = $this->num_rows($result);
+			if($num == 1){
+				return false;
+			}
+			return true;
+		}
+
+		public function addUser($firstName, $lastName, $email, $password){
+			$sql="INSERT INTO `user`(`user_id`, `firstName`, `lastName`, `email`, `password`) VALUES (NULL,'$firstName', '$lastName', '$email', '$password')";
+
+			$result = $this->query($sql);
+
+			return $result;
+		}
     }
